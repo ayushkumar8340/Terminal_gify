@@ -42,6 +42,25 @@ bool HeavyTerminal::setup(int argc,char** argv)
     return true;
 }
 
+gboolean HeavyTerminal::onTerminalKeyPress(GtkWidget *widget, GdkEventKey *event, gpointer user_data) 
+{
+    if (!GTK_IS_WIDGET(widget)) return FALSE;
+
+    // Detect Ctrl+Shift+C for copy
+    if ((event->state & GDK_CONTROL_MASK) && (event->state & GDK_SHIFT_MASK) && event->keyval == GDK_KEY_C) {
+        vte_terminal_copy_clipboard(VTE_TERMINAL(widget));
+        return TRUE;
+    }
+
+    // Detect Ctrl+Shift+V for paste
+    if ((event->state & GDK_CONTROL_MASK) && (event->state & GDK_SHIFT_MASK) && event->keyval == GDK_KEY_V) {
+        vte_terminal_paste_clipboard(VTE_TERMINAL(widget));
+        return TRUE;
+    }
+
+    return FALSE; // Propagate other keys
+}
+
 void HeavyTerminal::updateGIFPath(const char* filepath)
 {
     GError *error = nullptr;
@@ -96,6 +115,7 @@ void HeavyTerminal::addNewTerminalTab(GtkButton* button, gpointer user_data)
         nullptr, nullptr, nullptr);
 
     g_signal_connect(terminal, "child-exited", G_CALLBACK(onTerminalExit), notebook);
+    g_signal_connect(terminal, "key-press-event", G_CALLBACK(onTerminalKeyPress), nullptr);
 
     GtkWidget *tab_label_box = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 6);
     GtkWidget *tab_title = gtk_label_new(TERMINAL_NAME);

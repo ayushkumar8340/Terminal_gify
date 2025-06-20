@@ -27,6 +27,7 @@ namespace HeavyTerminal
         void onTerminalExit(VteTerminal *terminal, int status, gpointer notebook);
         void onTabCloseButtonClicked(GtkButton *button, gpointer user_data);
         void closeTerminalTab(GtkWidget *terminal_widget, GtkNotebook *notebook);
+        gboolean onTerminalKeyPress(GtkWidget *widget, GdkEventKey *event, gpointer user_data);
 };
 
 #endif
