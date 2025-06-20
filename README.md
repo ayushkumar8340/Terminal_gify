@@ -15,9 +15,7 @@
 ---
 
 ## 📸 Preview
-
-*(Add your own screenshot or GIF preview here)*
-
+<img src="./assets/readme.gif"/>
 ---
 
 ## 🛠️ Build Instructions
