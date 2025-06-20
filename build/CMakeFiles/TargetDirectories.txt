@@ -1,0 +1,8 @@
+/home/heavya/github_akp/Terminal_gify/build/CMakeFiles/heavy_terminal_lib.dir
+/home/heavya/github_akp/Terminal_gify/build/CMakeFiles/heavy_terminal.dir
+/home/heavya/github_akp/Terminal_gify/build/CMakeFiles/edit_cache.dir
+/home/heavya/github_akp/Terminal_gify/build/CMakeFiles/rebuild_cache.dir
+/home/heavya/github_akp/Terminal_gify/build/CMakeFiles/list_install_components.dir
+/home/heavya/github_akp/Terminal_gify/build/CMakeFiles/install.dir
+/home/heavya/github_akp/Terminal_gify/build/CMakeFiles/install/local.dir
+/home/heavya/github_akp/Terminal_gify/build/CMakeFiles/install/strip.dir
