@@ -1,5 +1,0 @@
-/usr/lib/libheavy_terminal_lib.so
-/usr/local/bin/heavy_terminal
-/usr/local/share/icons/hicolor/64x64/apps/heavy-terminal.png
-/usr/local/share/applications/heavy_terminal.desktop
-/home/heavya/.config/heavy_terminal/default_gif.gif
